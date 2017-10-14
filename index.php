@@ -47,9 +47,9 @@ foreach ($data as $key) { ?>
                     <div class="form-group has-success has-feedback">
                         <label class="control-label col-sm-3">Department:</label>
                         <div class="col-sm-9">
-                            <select class="mypicker selectpicker show-tick" id="depertment_list" name="dept" required="1">
-                                <option value="">Select Your Department</option>
-                            </select>
+<select class="mypicker selectpicker show-tick" id="depertment_list" name="dept" required="1">
+    <option value="">Select Your Department</option>
+</select>
                         </div>
                     </div>
                     <div class="form-group has-success has-feedback">
@@ -88,4 +88,20 @@ foreach ($data as $key) { ?>
     </div>
 </div>
 </div>
+
+<script>
+    function getDepertment(val) {
+        //alert(val);
+
+        $.ajax({
+            type: "POST",
+            url: "get_depertment.php",
+            data:'universityName='+val,
+            success: function(data){
+                $("#depertment_list").html(data);
+            }
+        });
+    }
+</script>
+
 <?php include 'include/footer.php'; ?>

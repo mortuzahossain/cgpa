@@ -1,24 +1,20 @@
 <?php
-include 'inc/db_config.php';
-if (!empty($_POST["uni_id"])) {
-	$uni_id = $_POST["uni_id"];
+include 'include/db_config.php';
+if (!empty($_POST["universityName"])) {
+	$universityName = $_POST["universityName"];
+}
 ?>
 <option value="">Select Your depertment</option>
-
 <?php
-	$sql = "SELECT * FROM depertment WHERE uni_value = 'baust'";
-	$query = mysqli_query($con,$sql);
-	while ($row = mysqli_fetch_assoc($query))
-	{
-	    $depertment_name[] = $row;
-	}
-        foreach ($depertment_name as $name) {
-    ?>
+$sql = "SELECT depertment FROM depertments WHERE universityName = '$universityName'";
+$result = mysqli_query($con,$sql);
+$row = mysqli_num_rows($result);
+if ($row) { 
+    while ($row =mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+foreach ($data as $key) { ?>
 
-    <option value="<?php echo $name['dept_value'];?>"><?php echo $name['dept_name'];?></option>
+        <option value="<?php echo $key['depertment'] ?>"><?php echo $key['depertment'] ?></option>
 
-<?php
-}
-}
-
-?>
+<?php } } ?>
