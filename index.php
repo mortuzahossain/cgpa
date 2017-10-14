@@ -50,7 +50,7 @@ if (isset($_POST['student_select'])) {
         <div class=".col-sm-8 col-md-8 input-fields">
             <h2>Enter Your Information</h2>
             <div class="main-form-field">
-                <form action="input.php" method="post" class="form-horizontal">
+                <form action="" method="post" class="form-horizontal">
                     <div class="form-group has-success has-feedback">
                         <label class="control-label col-sm-3">University:</label>
                         <div class="col-sm-9">

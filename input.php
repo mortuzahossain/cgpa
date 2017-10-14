@@ -1,17 +1,4 @@
 <?php
-	include 'include/header.php';
-	include 'include/db_config.php';
-	
-	session_start();
-	$goto = 0;
-	$goto = $_SESSION['goto'];
-	
-	if ($goto>0) {
-		$val = $_SESSION['sql'];
-	} else {
-		header("Location: index.php");
-	}
-	
 	// //echo $val;
 	// // For Geting Information Form The Databse
 	// $allsub = array();
@@ -40,7 +27,29 @@
 <?php
 include 'include/header.php';
 include 'include/db_config.php';
+	
+	session_start();
+	$goto = 0;
+	$goto = $_SESSION['goto'];
+	
+	if ($goto>0) {
+		$dynamic_sql = $_SESSION['sql'];
+	} else {
+		header("Location: index.php");
+	}
 
+	//echo $dynamic_sql;
+
+	$result = mysqli_query($con,$dynamic_sql);
+	$have_rows = mysqli_num_rows($result);
+	if ($have_rows) {
+		while ($row =mysqli_fetch_assoc($result)) {
+			$allsubject[] = $row;
+		}
+
+	}
+	//print_r($allsubject);
+	
 	
 ?>
 <div class="main-content">
@@ -48,7 +57,7 @@ include 'include/db_config.php';
 		<div class="row">
 			<div class="col-md-12 input-table">
 <?php if($have_rows){ ?>
-				<form action="calculate.php" method="post" class="form-horizontal">
+				<form action="" method="post" class="form-horizontal">
 					<table class="table table-condensed mytable">
 						<tr class="dangerous">
 							<td width="5%">#</td>
@@ -57,7 +66,7 @@ include 'include/db_config.php';
 							<td width="10%">Credit</td>
 							<td width="20%">Result</td>
 						</tr>
-<?php foreach ($allsubject as $key) { $i++; ?>
+<?php $i = 0; foreach ($allsubject as $key) { $i++; ?>
 						<tr>
 							<td width="5%"><?php echo $i;?></td>
 							<td width="45%"><?php echo $key['courseCode'];?></td>
