@@ -32,7 +32,7 @@ include 'include/db_config.php';
 	$goto = 0;
 	$goto = $_SESSION['goto'];
 	
-	if ($goto>0) {
+	if ($goto>0 AND isset($goto)) {
 		$dynamic_sql = $_SESSION['sql'];
 	} else {
 		header("Location: index.php");
@@ -50,7 +50,11 @@ include 'include/db_config.php';
 	}
 	//print_r($allsubject);
 	
-	
+	$total_credit = 0;
+	$totalGain = 0;
+	$res  = "result";
+	$all_sub_credit = array();
+
 ?>
 <div class="main-content">
 	<div class="container">
@@ -66,7 +70,11 @@ include 'include/db_config.php';
 							<td width="10%">Credit</td>
 							<td width="20%">Result</td>
 						</tr>
-<?php $i = 0; foreach ($allsubject as $key) { $i++; ?>
+<?php $i = 0; foreach ($allsubject as $key) {
+	$i++;
+	$total_credit =$total_credit + $key['courseCredit'];
+	$all_sub_credit[] = $key['courseCredit'];
+?>
 						<tr>
 							<td width="5%"><?php echo $i;?></td>
 							<td width="45%"><?php echo $key['courseCode'];?></td>
@@ -98,7 +106,7 @@ include 'include/db_config.php';
 					</div>
 				</form>
 <?php } else { ?>
-Nothing Found.
+<p class='worning'>No Data To Show.. Plese Contact with admin or Be an <a data-toggle="modal" data-target="#login">admin</a> .</p>
 <?php } ?>
 			</div>
 		</div>
@@ -106,6 +114,42 @@ Nothing Found.
 </div>
 
 
+
+
 <?php
 include 'include/footer.php';
+?>
+
+
+<?php
+
+// Start Calculating
+	if ($_SERVER['REQUEST_METHOD'] == "POST") {
+		for ($k=1; $k < $i+1 ; $k++) { 
+			$name[] =  $res.$k;
+		}
+		$totalGain = 0;
+		for($n = 0; $n < $i ; $n++){
+			$totalGain = $totalGain + ($all_sub_credit[$n] * $_POST[$name[$n]]);
+		}
+		$result = $totalGain/$total_credit;
+		?>
+		<script type="text/javascript">
+			//alert('<?php echo $result; ?>');
+        	
+        	jQuery(document).ready(function($){
+    		    swal({
+					title: "Your CGPA",
+					text: "<?php echo $result; ?>",
+			  		imageUrl: 'img/thumbs-up.jpg'
+				});
+    		});
+
+
+
+			//window.location="index.php"
+		</script>
+		<?php
+	}
+
 ?>
