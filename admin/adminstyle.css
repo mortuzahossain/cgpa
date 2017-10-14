@@ -1,7 +1,7 @@
-
 .right-sidebar table tr td a {
     color: #fff;
 }
+
 .right-sidebar table tr td a:hover {
     color: #000;
 }
@@ -11,4 +11,25 @@
     padding: 5px 14px;
     border: 2px solid #fff;
     border-radius: 5%;
+}
+
+ol.depertment-list li
+a {
+    color: #000;
+}
+
+ol.depertment-list li {
+    padding: 2px 9px;
+    border: 1px solid;
+    margin: 5px;
+    width: 50%;
+}
+
+.depertment-list a {
+    width: 100%;
+}
+
+.depertment-list a:hover {
+    color: #03a9f4;
+    background: #fff;
 }
