@@ -32,6 +32,7 @@
 <?php
 include 'include/add_university_model.php';
 include 'include/login_reg_model.php';
+include 'include/contact_model.php';
 ?>
 
         <script type="text/javascript">

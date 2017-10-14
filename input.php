@@ -10,6 +10,7 @@ include 'include/db_config.php';
 		$dynamic_sql = $_SESSION['sql'];
 	} else {
 		header("Location: index.php");
+		exit();
 	}
 
 	$result = mysqli_query($con,$dynamic_sql);

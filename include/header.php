@@ -38,7 +38,8 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#" onclick="universal()">Universal Calculator</a></li>
                                 <li><a  data-toggle="modal" data-target="#login">Login</a></li>
-                                <li><a  data-toggle="modal" data-target="#registration">Registration</a></li>
+                                <li><a  data-toggle="modal" data-target="#registration">Signup</a></li>
+                                <li><a  data-toggle="modal" data-target="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
