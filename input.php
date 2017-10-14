@@ -1,30 +1,4 @@
 <?php
-	// //echo $val;
-	// // For Geting Information Form The Databse
-	// $allsub = array();
-	// $all_sub_credit = array();
-	// // For showin the serial no
-	// $sl_no = 0;
-	// // For name generate
-	// $i = 0;
-	// $sql = "SELECT * FROM $val";
-	// $query = mysqli_query($con,$sql);
-	// if ($query) {
-		// 	while ($row = mysqli_fetch_assoc($query))
-		// 	{
-			// 		$allsub[] = $row;
-			// 		$i++;
-		// 	}
-	// }
-
-	
-	// // For calculation
-	// $total_credit = 0;
-	// $totalGain = 0;
-	// $res  = "res";
-	
-?>
-<?php
 include 'include/header.php';
 include 'include/db_config.php';
 	
@@ -38,8 +12,6 @@ include 'include/db_config.php';
 		header("Location: index.php");
 	}
 
-	//echo $dynamic_sql;
-
 	$result = mysqli_query($con,$dynamic_sql);
 	$have_rows = mysqli_num_rows($result);
 	if ($have_rows) {
@@ -48,7 +20,6 @@ include 'include/db_config.php';
 		}
 
 	}
-	//print_r($allsubject);
 	
 	$total_credit = 0;
 	$totalGain = 0;
@@ -122,8 +93,6 @@ include 'include/footer.php';
 
 
 <?php
-
-// Start Calculating
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		for ($k=1; $k < $i+1 ; $k++) { 
 			$name[] =  $res.$k;
@@ -144,10 +113,6 @@ include 'include/footer.php';
 			  		imageUrl: 'img/thumbs-up.jpg'
 				});
     		});
-
-
-
-			//window.location="index.php"
 		</script>
 		<?php
 	}
