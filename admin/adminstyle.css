@@ -10,5 +10,23 @@
     width: 100%;
     padding: 5px 14px;
     border: 2px solid #fff;
-    border-radius: 5%;
+}
+.right-sidebar table tr :hover{
+	background: #00cff2;
+	transition: .5s;
+
+}
+
+.btn {
+    font-size: 12px;
+    line-height: .95;
+}
+
+.mybtn{
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.right{
+	float: right;
 }
