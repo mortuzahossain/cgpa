@@ -254,7 +254,17 @@ select {
   color: #000 !important;
 }
 
-tr.dangerous{
+tr.dangerous {
   background: #00CFF2;
   font-weight: bold;
+}
+
+p.worning {
+  padding: 15px 10px;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
 }

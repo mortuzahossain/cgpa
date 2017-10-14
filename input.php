@@ -106,7 +106,7 @@ include 'include/db_config.php';
 					</div>
 				</form>
 <?php } else { ?>
-<p class='worning'>No Data To Show.. Plese Contact with admin or Be an <a data-toggle="modal" data-target="#login">admin</a> .</p>
+<p class='worning'>No Data To Show.. Plese Contact with admin or Be an <a data-toggle="modal" data-target="#login">admin</a>  OR Go <a href="index.php">Home</a>.</p>
 <?php } ?>
 			</div>
 		</div>
