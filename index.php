@@ -1,6 +1,14 @@
 <?php
 include 'include/header.php';
 include 'include/db_config.php';
+
+/*
+    TODO:
+    01. Showing University in university Selector                       -- Done
+    02. Showing Depertment using JQUERY                                 -- Done
+    03. Generate Dynamic Query and send it into calculation part        -- Pending
+*/
+
 ?>
 <div class="main-content">
     <div class="container">
