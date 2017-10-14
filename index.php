@@ -8,7 +8,7 @@ include 'include/db_config.php';
     02. Showing Depertment using JQUERY                                 -- Done
     03. Generate Dynamic Query and send it into calculation part        -- Pending
 */
-/*session_start();
+session_start();
 if (isset($_POST['student_select'])) {
     $university = $_POST['university'];
     $deptertment = $_POST['deptertment'];
@@ -27,7 +27,7 @@ if (isset($_POST['student_select'])) {
         header("Location: index.php");
     }
 }
-*/
+
 
 
 ?>

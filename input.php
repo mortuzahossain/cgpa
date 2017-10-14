@@ -1,14 +1,16 @@
 <?php
-	// include 'inc/db_connect.php';
-	// session_start();
-	// // Geting information from index page
-	// $goto = 0;
-	// $goto = $_SESSION['goto'];
-	// if ($goto>0) {
-		// 	$val = $_SESSION['sql'];
-	// } else {
-		// 	header("Location: index.php");
-	// }
+	include 'include/header.php';
+	include 'include/db_config.php';
+	
+	session_start();
+	$goto = 0;
+	$goto = $_SESSION['goto'];
+	
+	if ($goto>0) {
+		$val = $_SESSION['sql'];
+	} else {
+		header("Location: index.php");
+	}
 	
 	// //echo $val;
 	// // For Geting Information Form The Databse
@@ -27,6 +29,8 @@
 			// 		$i++;
 		// 	}
 	// }
+
+	
 	// // For calculation
 	// $total_credit = 0;
 	// $totalGain = 0;
@@ -36,33 +40,7 @@
 <?php
 include 'include/header.php';
 include 'include/db_config.php';
-$university = $_POST['university'];
-$deptertment = $_POST['deptertment'];
-$level = $_POST['level'];
-$term = $_POST['term'];
 
-$total_credit 	= 0;
-$totalGain 		= 0;
-$dynamic_sql 	= "";
-$i 				= 0;
-
-$sl_no 			= 0;
-$res  			= "res";
-
-if (!empty($university) && !empty($deptertment) && !empty($level) && !empty($term)) {
-	$dynamic_sql = "SELECT * FROM data WHERE universityName = '$university' AND depertment = '$deptertment' AND level = '$level' AND tearm = '$term'";
-} else {
-	header("Location: index.php");
-}
-//echo $dynamic_sql
-$result = mysqli_query($con,$dynamic_sql);
-$have_rows = mysqli_num_rows($result);
-if ($have_rows) {
-	while ($row =mysqli_fetch_assoc($result)) {
-		$allsubject[] = $row;
-	}
-}
-//print_r($allsubject);
 	
 ?>
 <div class="main-content">
