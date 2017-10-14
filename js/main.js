@@ -10,7 +10,10 @@
         $('[data-toggle="tooltip"]').tooltip();
 
 
-
+		var preloader = $('.preloader');
+		$(window).load(function(){
+			preloader.remove();
+		});
         
 
 

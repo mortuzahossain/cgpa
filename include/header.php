@@ -17,6 +17,9 @@
         <![endif]-->
     </head>
     <body>
+
+        <div class="preloader"><img src="img/preloader.gif" alt=""></div>
+
         <div class="main-menu">
             <div class="container">
                 <nav class="navbar navbar-default">

@@ -268,3 +268,22 @@ p.worning {
 a {
   cursor: pointer;
 }
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background: #191f26;
+}
+
+.preloader > img {
+  position: absolute;
+  height: 70%;
+  width: 50%;
+  top: 15%;
+  left: 25%;
+}
