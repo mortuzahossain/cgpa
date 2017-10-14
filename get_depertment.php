@@ -1,5 +1,5 @@
 <?php
-include 'inc/db_connect.php';
+include 'inc/db_config.php';
 if (!empty($_POST["uni_id"])) {
 	$uni_id = $_POST["uni_id"];
 ?>
