@@ -70,7 +70,7 @@ if ($have_rows) {
 		<div class="row">
 			<div class="col-md-12 input-table">
 <?php if($have_rows){ ?>
-				<form action="" method="post" class="form-horizontal">
+				<form action="calculate.php" method="post" class="form-horizontal">
 					<table class="table table-condensed mytable">
 						<tr class="dangerous">
 							<td width="5%">#</td>
@@ -86,7 +86,7 @@ if ($have_rows) {
 							<td width="20%"><?php echo $key['courseName'];?></td>
 							<td width="10%"><?php echo $key['courseCredit'];?></td>
 							<td width="20%">
-								<select class="mypickeri selectpicker show-tick" name="<?php echo "res".$i; ?>">
+								<select class="mypickeri selectpicker show-tick" name="<?php echo "result".$i; ?>">
 									<option value="4.0" >A+</option>
 									<option value="3.75" >A</option>
 									<option value="3.5" >A-</option>
@@ -101,10 +101,14 @@ if ($have_rows) {
 							</td>
 						</tr>
 <?php } ?>
-
-
-
 					</table>
+
+					<div class="form-group inputbutton">
+					    <div class="col-sm-offset-5 col-sm-7">
+						    <input class="btn btn-success" type="submit" name="calculate" value="Calculate">
+							<input class="btn btn-danger" type="reset" name="Reset">
+					    </div>
+					</div>
 				</form>
 <?php } else { ?>
 Nothing Found.
@@ -113,6 +117,8 @@ Nothing Found.
 		</div>
 	</div>
 </div>
+
+
 <?php
 include 'include/footer.php';
 ?>

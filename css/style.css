@@ -253,3 +253,8 @@ select {
 .model_label {
   color: #000 !important;
 }
+
+tr.dangerous{
+  background: #00CFF2;
+  font-weight: bold;
+}
