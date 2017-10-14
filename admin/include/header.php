@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../css/sweetalert.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="adminstyle.css">
         
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -18,7 +19,7 @@
     </head>
     <body>
 
-        <div class="preloader"><img src="img/preloader.gif" alt=""></div>
+        <div class="preloader"><img src="../img/preloader.gif" alt=""></div>
 
         <div class="main-menu">
             <div class="container">
@@ -36,7 +37,7 @@
                         
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a  data-toggle="modal" data-target="#login">Subjects</a></li>
+                                <li><a href="../index.php">Visit Website</a></li>
                                 <li><a  data-toggle="modal" data-target="#login">Logout</a></li>
                             </ul>
                         </div>

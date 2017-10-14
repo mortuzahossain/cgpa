@@ -33,3 +33,13 @@
 include 'include/add_university_model.php';
 include 'include/login_reg_model.php';
 ?>
+
+        <script type="text/javascript">
+            function universal(){
+                swal({
+                    title: "Comming Soon",
+                    text: "This Feature will be available after <?php echo date('Y') ?>.",
+                    imageUrl: 'img/thumbs-up.jpg'
+                });
+            }
+        </script>

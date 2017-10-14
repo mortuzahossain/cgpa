@@ -131,6 +131,8 @@ foreach ($data as $key) { ?>
             }
         });
     }
+
+    
 </script>
 
 <?php include 'include/footer.php'; ?>

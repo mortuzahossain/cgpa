@@ -36,7 +36,7 @@
                         
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Universal Calculator</a></li>
+                                <li><a href="#" onclick="universal()">Universal Calculator</a></li>
                                 <li><a  data-toggle="modal" data-target="#login">Login</a></li>
                                 <li><a  data-toggle="modal" data-target="#registration">Registration</a></li>
                             </ul>
@@ -45,3 +45,4 @@
                 </nav>
             </div>
         </div>
+

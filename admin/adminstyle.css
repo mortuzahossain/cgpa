@@ -1,0 +1,14 @@
+
+.right-sidebar table tr td a {
+    color: #fff;
+}
+.right-sidebar table tr td a:hover {
+    color: #000;
+}
+
+.right-sidebar table tr td {
+    width: 100%;
+    padding: 5px 14px;
+    border: 2px solid #fff;
+    border-radius: 5%;
+}
