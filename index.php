@@ -8,6 +8,27 @@ include 'include/db_config.php';
     02. Showing Depertment using JQUERY                                 -- Done
     03. Generate Dynamic Query and send it into calculation part        -- Pending
 */
+/*session_start();
+if (isset($_POST['student_select'])) {
+    $university = $_POST['university'];
+    $deptertment = $_POST['deptertment'];
+    $level = $_POST['level'];
+    $term = $_POST['term'];
+
+    $goto = 1;
+    $_SESSION['goto'] = $goto;
+
+    if (!empty($university) && !empty($deptertment) && !empty($level) && !empty($term)) {
+        $dynamic_sql = "SELECT * FROM data WHERE universityName = '$university' AND depertment = '$deptertment' AND level = '$level' AND tearm = '$term'";
+        $_SESSION['sql'] = $dynamic_sql;
+        //echo $dynamic_sql;
+        header("Location: input.php");
+    } else {
+        header("Location: index.php");
+    }
+}
+*/
+
 
 ?>
 <div class="main-content">
@@ -29,7 +50,7 @@ include 'include/db_config.php';
         <div class=".col-sm-8 col-md-8 input-fields">
             <h2>Enter Your Information</h2>
             <div class="main-form-field">
-                <form action="" method="post" class="form-horizontal">
+                <form action="input.php" method="post" class="form-horizontal">
                     <div class="form-group has-success has-feedback">
                         <label class="control-label col-sm-3">University:</label>
                         <div class="col-sm-9">
@@ -55,7 +76,7 @@ foreach ($data as $key) { ?>
                     <div class="form-group has-success has-feedback">
                         <label class="control-label col-sm-3">Department:</label>
                         <div class="col-sm-9">
-<select class="mypicker selectpicker show-tick" id="depertment_list" name="dept" required="1">
+<select class="mypicker selectpicker show-tick" id="depertment_list" name="deptertment" required="1">
     <option value="">Select Your Department</option>
 </select>
                         </div>
@@ -65,10 +86,10 @@ foreach ($data as $key) { ?>
                         <div class="col-sm-9">
                             <select class="mypicker selectpicker show-tick" name="level" required="1">
                                 <option value="">Select Your Level</option>
-                                <option value="l1" >1</option>
-                                <option value="l2" >2</option>
-                                <option value="l3" >3</option>
-                                <option value="l4" >4</option>
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                                <option value="4" >4</option>
                             </select>
                         </div>
                     </div>
@@ -78,9 +99,9 @@ foreach ($data as $key) { ?>
                         <div class="col-sm-9">
                             <select class="mypicker selectpicker show-tick" name="term" required="1">
                                 <option value="">Select Your Term</option>
-                                <option value="t1" >&#8544;</option>
-                                <option value="t2" >&#8545;</option>
-                                <option value="t3" >&#8546;</option>
+                                <option value="1" >&#8544;</option>
+                                <option value="2" >&#8545;</option>
+                                <option value="3" >&#8546;</option>
                             </select>
                         </div>
                     </div>
