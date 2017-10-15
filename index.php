@@ -66,6 +66,12 @@ if (isset($_GET['message'])) {
     elseif ($message == 'successfull') {
         echo '<p class="worning">Congratulate You become admin . <a data-toggle="modal" data-target="#login">Login</a>';
     }
+    elseif ($message == 'usernotexist') {
+        echo '<p class="worning">User Not Exist . You can register <a data-toggle="modal" data-target="#registration">Here</a>';
+    }
+    elseif ($message == 'unableaccess') {
+        echo '<p class="worning">You can not enter like this use login page. You can login <a data-toggle="modal" data-target="#login">Here</a>';
+    }
 }
     
 ?>

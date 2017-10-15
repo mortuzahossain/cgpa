@@ -6,10 +6,12 @@ if (isset($_POST['login'])) {
 	$username = mysql_real_escape_string($_POST['username']);
 	$password = mysql_real_escape_string($_POST['password']);
 
-	$sql = "SELECT * FROM admins WHERE username = '$username' OR email = '$email' AND password = '$password'";
+	$sql = "SELECT * FROM admins WHERE username = '$username' OR email = '$username' AND password = '$password'";
 	$result = mysqli_query($con,$sql);
 
-	if ($result) {
+	$user_check = mysqli_num_rows($result);
+
+	if ($user_check>0) {
 		if ($row = mysqli_fetch_assoc($result)) {
 			$_SESSION['name'] 			= $row['name'];
 			$_SESSION['username'] 		= $row['username'];
@@ -26,5 +28,5 @@ if (isset($_POST['login'])) {
 
 } else {
 	header('Location: index.php?message=unableaccess');
-	exit();
+	exit();	
 }

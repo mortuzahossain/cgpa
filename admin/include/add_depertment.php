@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['add_depertment'])) {
   $depertmentname = $_POST['depertmentname'];
-  $sql = "INSERT INTO depertments (universityName,depertment) VALUES ($user_university,'$depertmentname')";
+  $sql = "INSERT INTO depertments (universityName,depertment) VALUES ('$user_university','$depertmentname')";
 
   if (mysqli_query($con,$sql)) { ?>
   
@@ -13,7 +13,7 @@ if (isset($_POST['add_depertment'])) {
     <script type="text/javascript">
       alert("Something Wrong Please Try Again");
   </script>
-  <?php } ?>
+<?php } } ?>
 
 <div class="modal fade" id="add_depertment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
