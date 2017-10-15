@@ -1,9 +1,15 @@
 <?php
 include 'include/header.php';
-/*
-// Geting Depertment name from url
-$depertment_name = $_GET['depertmentName'];
-*/
+include '../include/db_config.php';
+
+if ($_GET['level'] AND $_GET['tearm'] AND ) {
+	$level = $_GET['level'];
+	$tearm = $_GET['tearm'];
+} else {
+	header('Location: logout.php');
+    exit(); 
+}
+
 ?>
 <div class="container main-content">
 	<div class="row">
@@ -11,7 +17,13 @@ $depertment_name = $_GET['depertmentName'];
 			<?php include 'include/right_sidebar.php'; ?>
 		</div>
 		<div class="col-md-10 main-content-penel">
-			<h2>EEE Level 1 Tearm 1 <span><a href="" class="btn btn-success right">Add Subject</a></span></h2>
+			<h2>EEE Level <?php echo $level; ?> Tearm <?php echo $tearm; ?> <span><a class="btn btn-success right">Add Subject</a></span></h2>
+
+<?php
+	$sql = "SELECT * FROM data WHERE universityName = '$university' AND depertment ";
+
+?>
+
 			<table class="table table-condensed mytable">
 				<tr class="dangerous">
 					<td width="5%">#</td>
@@ -30,6 +42,8 @@ $depertment_name = $_GET['depertmentName'];
 				</tr>
 
 			</table>
+
+
 		</div>
 	</div>
 </div>

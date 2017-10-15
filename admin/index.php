@@ -29,6 +29,9 @@ if (isset($_GET['message'])) {
     elseif ($message == 'successfully_added') {
     	echo "<p class='worning'>Depertment Added Successfully . </p>";
     }
+    elseif ($message == 'update_dept_name') {
+    	echo "<p class='worning'>Depertment Name Update Successfully . </p>";
+    }
 }
 ?>
 

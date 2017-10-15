@@ -1,8 +1,12 @@
 <?php
 include 'include/header.php';
-//$depertmentId = $_GET['id'];
-$depertmentName = $_GET['depertment'];
-
+if ($_GET['depertment'] AND $_GET['id']) {
+	$depertmentName 	= $_GET['depertment'];
+	$depertmentId 		= $_GET['id'];
+} else {
+	header('Location: logout.php');
+    exit(); 
+}
 
 ?>
 <div class="container main-content">
@@ -11,7 +15,7 @@ $depertmentName = $_GET['depertment'];
 			<?php include 'include/right_sidebar.php'; ?>
 		</div>
 		<div class="col-md-10 main-content-penel">
-			<h2>Depertment <?php echo $depertmentName; ?></h2>
+			<h2>Depertment <?php echo $depertmentName; ?><span><a data-toggle="modal" data-target="#add_depertment" class="btn btn-success right">Edit Depertment</a></span></h2>
 			<table class="table table-condensed mytable">
 				<tr class="dangerous">
 					<td>Level</td>
@@ -25,7 +29,7 @@ for ($i=0; $i < 4 ; $i++) {
 				<tr>
 					<td><?php echo $i+1; ?></td>
 					<td><?php echo $j+1; ?></td>
-					<td><a href="leveltearm.php?level=<?php echo $i+1; ?>&tearn=<?php echo $j+1; ?>" class="btn btn-success right">View / Edit</a></td>
+					<td><a href="leveltearm.php?level=<?php echo $i+1; ?>&tearm=<?php echo $j+1; ?>&depertment=<?php echo $depertmentName; ?>" class="btn btn-success right">View / Edit</a></td>
 				</tr>
 <?php }} ?>
 			</table>
@@ -33,5 +37,6 @@ for ($i=0; $i < 4 ; $i++) {
 	</div>
 </div>
 <?php
+include 'include/edit_depertment_model.php';
 include 'include/footer.php';
 ?>
