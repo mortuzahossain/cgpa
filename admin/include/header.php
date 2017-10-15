@@ -49,7 +49,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="../index.php">Visit Website</a></li>
-                                <li><a  data-toggle="modal" data-target="#login">Logout</a></li>
+                                <li><a  href="logout.php">Logout</a></li>
                             </ul>
                         </div>
                     </div>
