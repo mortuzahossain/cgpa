@@ -1,8 +1,8 @@
 <?php
 include 'include/header.php';
 if ($_GET['depertment'] AND $_GET['id']) {
-	$depertmentName 	= $_GET['depertment'];
-	$depertmentId 		= $_GET['id'];
+	$depertmentName 				= $_GET['depertment'];
+	$_SESSION['depertmentId'] 		= $_GET['id'];
 } else {
 	header('Location: logout.php');
     exit(); 
