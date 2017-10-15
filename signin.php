@@ -13,6 +13,7 @@ if (isset($_POST['login'])) {
 
 	if ($user_check>0) {
 		if ($row = mysqli_fetch_assoc($result)) {
+			
 			$_SESSION['name'] 			= $row['name'];
 			$_SESSION['username'] 		= $row['username'];
 			$_SESSION['email'] 			= $row['email'];

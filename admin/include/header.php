@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if (isset($_SESSION['name'])) {
+        # code...
+    } else {
+        header('Location: ../index.php?message=unableaccess');
+        exit(); 
+    }
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
