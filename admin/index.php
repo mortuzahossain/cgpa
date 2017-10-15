@@ -36,7 +36,7 @@ if (isset($_GET['message'])) {
 			<h3><?php echo $university; ?> Have This Deertment's</h3>
 <?php
 // Get Depertmertment list
-	$sql = "SELECT depertment FROM depertments WHERE universityName = '$university'";
+	$sql = "SELECT * FROM depertments WHERE universityName = '$university'";
 	$result = mysqli_query($con,$sql);
 	$have_depertment = mysqli_num_rows($result);
 	if ($have_depertment) {
@@ -46,7 +46,7 @@ if (isset($_GET['message'])) {
 		?>
 			<ol class="depertment-list">
 <?php foreach ($depertments as $depertment) { ?>
-				<a href="#"><li><?php echo $depertment['depertment']; ?></li></a>
+				<a href="depertment.php?id=<?php echo $depertment['id'] ?>&depertment=<?php echo $depertment['depertment']; ?>"><li><?php echo $depertment['depertment']; ?></li></a>
 <?php } ?>
 			</ol>		
 		<?php
