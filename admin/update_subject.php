@@ -11,7 +11,7 @@ $depertment_name = $_GET['depertmentName'];
 			<?php include 'include/right_sidebar.php'; ?>
 		</div>
 		<div class="col-md-10 main-content-penel">
-			<h2>EEE Level 1 Tearm 1 <span><a href="" class="btn btn-success right">Add Subject</a></span></h2>
+			<h2>Update Subject : <span></h2>
 			 <form action="" method="post">
 			    <table class="table table-bordered">
 			        <tr>
@@ -25,22 +25,6 @@ $depertment_name = $_GET['depertmentName'];
 			        <tr>
 			            <td>Father Name</td>
 			            <td><input type="text" name="fname" class="form-control myinput" placeholder="father namename" value=""></td>
-			        </tr>
-			        <tr>
-			            <td>Mother Name</td>
-			            <td><input type="text" name="mname" class="form-control myinput" placeholder="father namename" value=""></td>
-			        </tr>
-			        <tr>
-			            <td>Phone</td>
-			            <td><input type="text" name="phone" class="form-control myinput" placeholder="phone" value=""></td>
-			        </tr>
-			        <tr>
-			            <td>Email</td>
-			            <td><input type="text" name="email" class="form-control myinput" placeholder="email" value=""></td>
-			        </tr>
-			        <tr>
-			            <td>Enrole Day</td>
-			            <td><input type="date" name="enrollday" class="form-control myinput" placeholder="enroll day" value=""></td>
 			        </tr>
 			    </table>
 
