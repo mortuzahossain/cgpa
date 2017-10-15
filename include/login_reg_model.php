@@ -11,13 +11,13 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">Email / Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="name@example.com" name="username">
+                        <input type="text" class="form-control" placeholder="name@example.com" name="username" required="1">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" placeholder="password" name="password">
+                        <input type="password" class="form-control" placeholder="password" name="password" required="1">
                     </div>
                 </div>
                 <div class="form-group">
