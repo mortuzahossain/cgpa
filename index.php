@@ -48,6 +48,26 @@ if (isset($_POST['student_select'])) {
             </div>
         </div>
         <div class=".col-sm-8 col-md-8 input-fields">
+
+<?php
+    // Messahe From URL
+if (isset($_GET['message'])) {
+    $message = $_GET['message'];
+    if ($message == 'emptyField') {
+       echo "<p class='worning'>Please Fill All The input . Try again <a data-toggle='modal' data-target='#registration'>Click Me</a>";
+    }
+    elseif ($message == 'userexist') {
+        echo '<p class="worning">Username or Email Already existy . Try again Another email or username .<a data-toggle="modal" data-target="#registration">Click Me</a>';
+    }
+    elseif ($message == 'signupfailed') {
+         echo '<p class="worning">Sorry Our server faield to save your information . Please Try again after some time.<a data-toggle="modal" data-target="#registration">Click Me</a>';
+    }
+    elseif ($message == 'successfull') {
+        echo '<p class="worning">Congratulate You become admin . <a data-toggle="modal" data-target="#login">Login</a>';
+    }
+}
+    
+?>
             <h2>Enter Your Information</h2>
             <div class="main-form-field">
                 <form action="" method="post" class="form-horizontal">
