@@ -2,7 +2,6 @@
 include 'include/header.php';
 include 'include/db_config.php';
 	
-	session_start();
 	$goto = 0;
 	$goto = $_SESSION['goto'];
 	
