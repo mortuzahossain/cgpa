@@ -7,22 +7,22 @@
             <h4 class="modal-title" id="myModalLabel">Login</h4>
         </div>
         <div class="modal-body">
-            <form class="form-horizontal" method="post" action="">
+            <form class="form-horizontal" method="post" action="signin.php">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label model_label">Email</label>
+                    <label class="col-sm-2 control-label model_label">Email / Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="name@example.com" name="name">
+                        <input type="text" class="form-control" placeholder="name@example.com" name="username">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" placeholder="password" name="roll">
+                        <input type="password" class="form-control" placeholder="password" name="password">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-10 col-sm-2">
-                        <button name="saveme" type="submit" class="btn btn-default">Login</button>
+                        <button name="login" type="submit" class="btn btn-default">Login</button>
                     </div>
                 </div>
             </form>
