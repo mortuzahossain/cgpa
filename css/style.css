@@ -296,3 +296,7 @@ a {
   color: #fff;
   margin-top: 40px;
 }
+
+.modal-dialog{
+  width: 905px;
+}
