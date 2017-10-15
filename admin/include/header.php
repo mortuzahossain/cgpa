@@ -1,7 +1,10 @@
 <?php
     session_start();
     if (isset($_SESSION['name'])) {
-        # code...
+        $name           = $_SESSION['name'];
+        $username       = $_SESSION['username'];
+        $email          = $_SESSION['email'];
+        $university     = $_SESSION['university'];
     } else {
         header('Location: ../index.php?message=unableaccess');
         exit(); 

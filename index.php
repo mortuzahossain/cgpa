@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'include/header.php';
 include 'include/db_config.php';
 
@@ -71,6 +70,9 @@ if (isset($_GET['message'])) {
     }
     elseif ($message == 'unableaccess') {
         echo '<p class="worning">You can not enter like this use login page. You can login <a data-toggle="modal" data-target="#login">Here</a>';
+    }
+    elseif ($message == 'logout') {
+        echo '<p class="worning">You logout from my system . You can login again <a data-toggle="modal" data-target="#login">Here</a>';
     }
 }
     

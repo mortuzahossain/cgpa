@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -37,9 +41,13 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#" onclick="universal()">Universal Calculator</a></li>
+                                <li><a  data-toggle="modal" data-target="#contact">Contact</a></li>
+                                <?php if (!isset($_SESSION['name'])) {?>
                                 <li><a  data-toggle="modal" data-target="#login">Login</a></li>
                                 <li><a  data-toggle="modal" data-target="#registration">Signup</a></li>
-                                <li><a  data-toggle="modal" data-target="#contact">Contact</a></li>
+                                <?php } else { ?>
+                                <li><a  href="admin/index.php">Admin Penel</a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
