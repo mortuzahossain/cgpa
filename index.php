@@ -54,25 +54,25 @@ if (isset($_POST['student_select'])) {
 if (isset($_GET['message'])) {
     $message = $_GET['message'];
     if ($message == 'emptyField') {
-       echo "<p class='worning'>Please Fill All The input . Try again <a data-toggle='modal' data-target='#registration'>Click Me</a>";
+       echo "<p class='worning'>Please Fill All The input . Try again <a data-toggle='modal' data-target='#registration'>Click Me</a></p>";
     }
     elseif ($message == 'userexist') {
-        echo '<p class="worning">Username or Email Already existy . Try again Another email or username .<a data-toggle="modal" data-target="#registration">Click Me</a>';
+        echo '<p class="worning">Username or Email Already existy . Try again Another email or username .<a data-toggle="modal" data-target="#registration">Click Me</a></p>';
     }
     elseif ($message == 'signupfailed') {
-         echo '<p class="worning">Sorry Our server faield to save your information . Please Try again after some time.<a data-toggle="modal" data-target="#registration">Click Me</a>';
+         echo '<p class="worning">Sorry Our server faield to save your information . Please Try again after some time.<a data-toggle="modal" data-target="#registration">Click Me</a></p>';
     }
     elseif ($message == 'successfull') {
-        echo '<p class="worning">Congratulate You become admin . <a data-toggle="modal" data-target="#login">Login</a>';
+        echo '<p class="worning">Congratulate You become admin . <a data-toggle="modal" data-target="#login">Login</a></p>';
     }
     elseif ($message == 'usernotexist') {
-        echo '<p class="worning">User Not Exist . You can register <a data-toggle="modal" data-target="#registration">Here</a>';
+        echo '<p class="worning">User Not Exist . You can register <a data-toggle="modal" data-target="#registration">Here</a></p>';
     }
     elseif ($message == 'unableaccess') {
-        echo '<p class="worning">You can not enter like this use login page. You can login <a data-toggle="modal" data-target="#login">Here</a>';
+        echo '<p class="worning">You can not enter like this use login page. You can login <a data-toggle="modal" data-target="#login">Here</a></p>';
     }
     elseif ($message == 'logout') {
-        echo '<p class="worning">You logout from my system . You can login again <a data-toggle="modal" data-target="#login">Here</a>';
+        echo '<p class="worning">You logout from my system . You can login again <a data-toggle="modal" data-target="#login">Here</a></p>';
     }
 }
     
