@@ -52,7 +52,13 @@ if (isset($_GET['message'])) {
     	echo "<p class='worning'>Subject Name Update Successfully . </p>";
     }
     elseif ($message == 'successfully_added') {
-    	echo "<p class='worning'>Subject Added Successfully . You can <a  data-toggle='modal' data-target='#add_subject' class='btn btn-success right'>Add More</a></p>";
+    	echo "<p class='worning'>Subject Added Successfully . You can <a  data-toggle='modal' data-target='#add_subject' class='btn btn-success'>Add More</a></p>";
+    }
+    elseif ($message == 'delete') {
+    	echo "<p class='worning'>Subject Delete Successfully . You can <a  data-toggle='modal' data-target='#add_subject' class='btn btn-success'>Add More</a></p>";
+    }
+    elseif ($message == 'successfully_updated') {
+    	echo "<p class='worning'>Subject Update Successfully . You can <a  data-toggle='modal' data-target='#add_subject' class='btn btn-success'>Add More</a></p>";
     }
 }
 ?>
@@ -73,16 +79,16 @@ if (isset($_GET['message'])) {
 					<td width="5%">#</td>
 					<td width="45%">Subject Name</td>
 					<td width="20%">Code</td>
-					<td width="20%">Credit</td>
-					<td width="10%">Edit</td>
+					<td width="10%">Credit</td>
+					<td width="20%" class="text-center">Edit / Delete</td>
 				</tr>
 <?php $i = 0; foreach ($allsubject as $key) { $i++; ?>
 				<tr>
 					<td width="5%"><?php echo $i; ?></td>
 					<td width="45%"><?php echo $key['courseName']; ?></td>
 					<td width="20%"><?php echo $key['courseCode']; ?></td>
-					<td width="20%"><?php echo $key['courseCredit']; ?></td>
-					<td width="10%"><a href="update_subject.php?subject_id=<?php echo $key['id']; ?>" class="btn btn-success">Edit</a></td>
+					<td width="10%"><?php echo $key['courseCredit']; ?></td>
+					<td width="20%" class="text-center"><a href="update_subject.php?subject_id=<?php echo $key['id']; ?>&name=<?php echo $key['courseName']; ?>&courseCode=<?php echo $key['courseCode'] ?>&courseCredit=<?php echo $key['courseCredit']; ?>" class="btn btn-success">Edit</a><a href="delete_subject.php?subject_id=<?php echo $key['id']; ?>" class="btn btn-success margin-left">Delete</a></td>
 				</tr>
 <?php } ?>
 			</table>

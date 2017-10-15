@@ -49,3 +49,11 @@ line-height: 1.25;
 .right {
 float: right;
 }
+
+.margin-left{
+    margin-left: 30px;
+}
+
+.myform-update-subject{
+    margin-top: 20px;
+}

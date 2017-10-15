@@ -6,6 +6,8 @@
 		header('Location: ../index.php?message=logout');
 		exit();
 	} else {
+		session_unset();
+		session_destroy();
 	    header('Location: ../index.php?message=unableaccess');
 	    exit(); 
 	}

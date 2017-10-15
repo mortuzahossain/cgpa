@@ -1,5 +1,7 @@
 <?php
 
+include 'include/db_config.php';
+
 $showMessage = "";
 if (isset($_POST['sendmail'])) {
     $name       = validate($_POST['name']);
