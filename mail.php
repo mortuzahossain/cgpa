@@ -1,9 +1,5 @@
 <?php
-function validate($value)
-{
-    $value = mysql_real_escape_string($value);
-    return $value;
-}
+
 $showMessage = "";
 if (isset($_POST['sendmail'])) {
     $name       = validate($_POST['name']);

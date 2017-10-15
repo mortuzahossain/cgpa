@@ -11,4 +11,11 @@ $con = mysqli_connect($host,$user,$password,$db_name);
 	echo "Database Connection SuccessFull";
 }
 */
+
+function validate($value)
+{
+    $value = mysql_real_escape_string($value);
+    return $value;
+}
+
 ?>
