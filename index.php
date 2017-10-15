@@ -60,7 +60,7 @@ if (isset($_GET['message'])) {
         echo '<p class="worning">Username or Email Already existy . Try again Another email or username .<a data-toggle="modal" data-target="#registration">Click Me</a></p>';
     }
     elseif ($message == 'signupfailed') {
-         echo '<p class="worning">Sorry Our server faield to save your information . Please Try again after some time.<a data-toggle="modal" data-target="#registration">Click Me</a></p>';
+        echo '<p class="worning">Sorry Our server faield to save your information . Please Try again after some time.<a data-toggle="modal" data-target="#registration">Click Me</a></p>';
     }
     elseif ($message == 'successfull') {
         echo '<p class="worning">Congratulate You become admin . <a data-toggle="modal" data-target="#login">Login</a></p>';
