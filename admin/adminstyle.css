@@ -10,49 +10,42 @@
     width: 100%;
     padding: 5px 14px;
     border: 2px solid #fff;
-<<<<<<< HEAD
     border-radius: 5%;
 }
 
-ol.depertment-list li
-a {
+ol.depertment-list a li {
     color: #000;
+    margin-bottom: 8px;
 }
 
 ol.depertment-list li {
     padding: 2px 9px;
     border: 1px solid;
     margin: 5px;
-    width: 50%;
 }
 
-.depertment-list a {
-    width: 100%;
+ol.depertment-list li:hover {
+    color: #000000;
+    background: #ffffff;
 }
 
-.depertment-list a:hover {
-    color: #03a9f4;
-    background: #fff;
 }
-=======
-}
-.right-sidebar table tr :hover{
-	background: #00cff2;
-	transition: .5s;
 
+.right-sidebar table tr:hover {
+background: #00cff2;
+transition: .5s;
 }
 
 .btn {
-    font-size: 12px;
-    line-height: .95;
+font-size: 12px;
+line-height: .95;
 }
 
-.mybtn{
-    font-size: 18px;
-    line-height: 1.25;
+.mybtn {
+font-size: 18px;
+line-height: 1.25;
 }
 
-.right{
-	float: right;
+.right {
+float: right;
 }
->>>>>>> depertmentinfo

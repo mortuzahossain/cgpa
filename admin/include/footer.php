@@ -28,8 +28,3 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
-
-<?php
-include '../include/add_university_model.php';
-include '../include/login_reg_model.php';
-?>
