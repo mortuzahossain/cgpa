@@ -3,10 +3,10 @@ include 'include/header.php';
 include 'include/db_config.php';
 
 if (isset($_POST['student_select'])) {
-    $university = $_POST['university'];
-    $deptertment = $_POST['deptertment'];
-    $level = $_POST['level'];
-    $term = $_POST['term'];
+    $university             = validate($_POST['university']);
+    $deptertment            = validate($_POST['deptertment']);
+    $level                  = validate($_POST['level']);
+    $term                   = validate($_POST['term']);
 
     $goto = 1;
     $_SESSION['goto'] = $goto;
@@ -93,9 +93,9 @@ if (isset($_GET['message'])) {
                             <select class="mypicker selectpicker show-tick"  id="university-list"  name="university" required="1" onChange="getDepertment(this.value);">
                                 <option value="">Select Your University</option>
 <?php
-$sql = "SELECT * FROM universitys";
-$result = mysqli_query($con,$sql);
-$row = mysqli_num_rows($result);
+$sql            = "SELECT * FROM universitys";
+$result         = mysqli_query($con,$sql);
+$row            = mysqli_num_rows($result);
 if ($row) { 
     while ($row =mysqli_fetch_assoc($result)) {
         $data[] = $row;
@@ -156,8 +156,6 @@ foreach ($data as $key) { ?>
 
 <script>
     function getDepertment(val) {
-        //alert(val);
-
         $.ajax({
             type: "POST",
             url: "get_depertment.php",
@@ -166,9 +164,7 @@ foreach ($data as $key) { ?>
                 $("#depertment_list").html(data);
             }
         });
-    }
-
-    
+    }    
 </script>
 
 <?php include 'include/footer.php'; ?>

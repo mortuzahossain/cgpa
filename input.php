@@ -43,8 +43,8 @@ include 'include/db_config.php';
 						</tr>
 <?php $i = 0; foreach ($allsubject as $key) {
 	$i++;
-	$total_credit =$total_credit + $key['courseCredit'];
-	$all_sub_credit[] = $key['courseCredit'];
+	$total_credit 			=$total_credit + $key['courseCredit'];
+	$all_sub_credit[] 		= $key['courseCredit'];
 ?>
 						<tr>
 							<td width="5%"><?php echo $i;?></td>
@@ -104,8 +104,6 @@ include 'include/footer.php';
 		$result = $totalGain/$total_credit;
 		?>
 		<script type="text/javascript">
-			//alert('<?php echo $result; ?>');
-        	
         	jQuery(document).ready(function($){
     		    swal({
 					title: "Your CGPA",

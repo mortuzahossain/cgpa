@@ -3,11 +3,11 @@ session_start();
 include 'include/db_config.php';
 
 if (isset($_POST['login'])) {
-	$username = mysql_real_escape_string($_POST['username']);
-	$password = mysql_real_escape_string($_POST['password']);
+	$username 			= validate($_POST['username']);
+	$password 			= validate($_POST['password']);
 
-	$sql = "SELECT * FROM admins WHERE username = '$username' OR email = '$username' AND password = '$password'";
-	$result = mysqli_query($con,$sql);
+	$sql 				= "SELECT * FROM admins WHERE username = '$username' OR email = '$username' AND password = '$password'";
+	$result 			= mysqli_query($con,$sql);
 
 	$user_check = mysqli_num_rows($result);
 
