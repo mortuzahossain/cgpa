@@ -39,7 +39,7 @@ if (isset($_POST['student_select'])) {
                         <p>ID: 150102099</p>
                     </div>
                 </div><div class="about-add-botton">
-                <h3  data-toggle="modal" data-target="#add_university" >Add your University</h3>
+                <?php if (!isset($_SESSION['name'])) {?><h3  data-toggle="modal" data-target="#add_university" >Add your University</h3><?php } ?>
             </div>
         </div>
         <div class=".col-sm-8 col-md-8 input-fields">
