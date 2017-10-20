@@ -2,13 +2,6 @@
 include 'include/header.php';
 include 'include/db_config.php';
 
-/*
-    TODO:
-    01. Showing University in university Selector                       -- Done
-    02. Showing Depertment using JQUERY                                 -- Done
-    03. Generate Dynamic Query and send it into calculation part        -- Done
-*/
-
 if (isset($_POST['student_select'])) {
     $university = $_POST['university'];
     $deptertment = $_POST['deptertment'];
@@ -81,6 +74,12 @@ if (isset($_GET['message'])) {
     }
     elseif ($message == 'mail_send_successfull') {
         echo '<p class="worning">We got Your email. We will come back to you as much as possiable.</p>';
+    }
+    elseif ($message == 'iea') {
+        echo '<p class="worning">Please provide a valid email address.</p>';
+    }
+    elseif ($message == 'msw') {
+        echo '<p class="worning">Error During Message sending . Please Try Again .</p>';
     }
 }
     
