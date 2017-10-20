@@ -13,13 +13,13 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="name@example.com" name="name">
+                        <input type="text" class="form-control" placeholder="Mortuza" name="name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="name@example.com" name="email">
+                        <input type="email" class="form-control" placeholder="name@example.com" name="email">
                     </div>
                 </div>
                 <div class="form-group">
