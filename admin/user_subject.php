@@ -1,6 +1,5 @@
 <?php
 include 'include/header.php';
-include '../include/db_config.php';
 
 if (isset($userId)) {
 	$sql = "SELECT * FROM admins WHERE id = $userId";

@@ -45,4 +45,4 @@ include 'include/contact_model.php';
 </body>
 </html>
 
-
+<?php mysqli_close($con); ?>

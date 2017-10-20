@@ -1,6 +1,5 @@
 <?php
 include 'include/header.php';
-include '../include/db_config.php';
 $sql = "SELECT * FROM admins WHERE id = $userId";
 $result = mysqli_query($con , $sql)->fetch_assoc();
 ?>

@@ -1,6 +1,6 @@
 <?php
 include 'include/header.php';
-include '../include/db_config.php';
+
 
 ?>
 
@@ -36,7 +36,7 @@ if (isset($_GET['message'])) {
 ?>
 
 			<h1 class="text-center">WelCome <?php echo $name; ?></h1>
-			<h3><?php echo $university; ?> Have This Deertment's</h3>
+			<h3><?php echo $university; ?> Have This Depertment's</h3>
 <?php
 // Get Depertmertment list
 	$sql = "SELECT * FROM depertments WHERE universityName = '$university'";

@@ -1,6 +1,5 @@
 <?php
 include 'include/header.php';
-include '../include/db_config.php';
 
 if (isset($_GET['level']) AND isset($_GET['tearm']) AND isset($_GET['depertment'] )) {
 	$level 						= $_GET['level'];

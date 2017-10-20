@@ -1,11 +1,13 @@
 <?php
     session_start();
+
     if (isset($_SESSION['name'])) {
         $userId         = $_SESSION['userId'];
         $name           = $_SESSION['name'];
         $username       = $_SESSION['username'];
         $email          = $_SESSION['email'];
         $university     = $_SESSION['university'];
+        include '../include/db_config.php';
     } else {
         header('Location: ../index.php?message=unableaccess');
         exit(); 
