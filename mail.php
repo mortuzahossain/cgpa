@@ -1,8 +1,6 @@
 <?php
-
 include 'include/db_config.php';
 
-$showMessage = "";
 if (isset($_POST['sendmail'])) {
     $name       = validate($_POST['name']);
     $email      = validate($_POST['email']);
@@ -11,27 +9,14 @@ if (isset($_POST['sendmail'])) {
     $to         = 'mortuzahossain1997@gmail.com';
     $subject    = 'Form CGPA calculator APP '.$name. 'My Email is' .$email;
 
-    if (!empty($name) AND !empty($email) AND !empty($message) AND mail($to, $subject, $message)) {
-        $showMessage =  "Thanks For Your FeedBack . I will come back to you right now.";
+    if (!empty($name) AND !empty($email) AND !empty($message)) {
+        header('Location: index.php?message=mail_send_successfull');
     } else {
-        $showMessage = "Something Went Wrong Please Try Again.";
+        header('Location: index.php?message=mail_field_empty');
     }
 } else {
     header('Location: index.php');
+    exit();
 }
 
-include 'include/header.php';
-?>
-<div class="main-content text-center">
-    <div class="container">
-        <div class="row">
-            <div class="center message">
-                <h2><?php echo $showMessage; ?></h2>
-                <h1>Or</h1>
-                <p><a href="index.php" class="btn btn-success">GO HOME</a></p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<?php include 'include/footer.php'; ?>

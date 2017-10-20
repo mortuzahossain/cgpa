@@ -32,10 +32,30 @@ if (isset($_GET['message'])) {
 			            <td>Name</td>
 			            <td><input type="text" name="name" class="form-control myinput" placeholder="Name" value="<?php echo $name ?>" ></td>
 			        </tr>
+<?php
+$sql = "SELECT depertment FROM depertments WHERE universityName = '$university'";
+$user_depertments = mysqli_query($con , $sql);
+$count_depertment = mysqli_num_rows($user_depertments);
+if ($count_depertment) {
+	while ($row =mysqli_fetch_assoc($user_depertments)) {
+	    $data[] = $row;
+	}
+?>
+
 			        <tr>
 			            <td>Subject</td>
-			            <td><input type="text" name="subject" class="form-control myinput" placeholder="EEE" value="<?php echo $result['current_subject'] ?>"></td>
+			            <td>
+							<select class="form-control subject_picker selectpicker show-tick " id="depertment_list" name="subject" required="1">
+<?php foreach ($data as $key) {?>
+							    <option value="<?php echo $key['depertment']; ?>" <?php if ($key['depertment'] == $result['current_subject'] ) {echo 'selected'; } ?> ><?php echo $key['depertment']; ?></option>
+<?php }  ?>
+							</select>
+			            </td>
 			        </tr>
+<?php } else { ?>
+<p class='worning'>Depertment is not added yet. <a data-toggle="modal" data-target="#add_depertment">Add Here.</a></p>
+<?php } ?>	        
+
 			        <tr>
 			            <td>Level</td>
 			            <td><input type="number" name="level" class="form-control myinput" placeholder="0" value="<?php echo $result['current_level'] ?>"></td>
@@ -56,5 +76,6 @@ if (isset($_GET['message'])) {
 	</div>
 </div>
 <?php
+include 'include/add_depertment_model.php';
 include 'include/footer.php';
 ?>

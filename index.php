@@ -6,7 +6,7 @@ include 'include/db_config.php';
     TODO:
     01. Showing University in university Selector                       -- Done
     02. Showing Depertment using JQUERY                                 -- Done
-    03. Generate Dynamic Query and send it into calculation part        -- Pending
+    03. Generate Dynamic Query and send it into calculation part        -- Done
 */
 
 if (isset($_POST['student_select'])) {
@@ -23,8 +23,10 @@ if (isset($_POST['student_select'])) {
         $_SESSION['sql'] = $dynamic_sql;
         //echo $dynamic_sql;
         header("Location: input.php");
+        exit();
     } else {
         header("Location: index.php");
+        exit();
     }
 }
 
@@ -73,6 +75,12 @@ if (isset($_GET['message'])) {
     }
     elseif ($message == 'logout') {
         echo '<p class="worning">You logout from my system . You can login again <a data-toggle="modal" data-target="#login">Here</a></p>';
+    }
+    elseif ($message == 'mail_field_empty') {
+        echo '<p class="worning">Please Fill All the input Field.</p>';
+    }
+    elseif ($message == 'mail_send_successfull') {
+        echo '<p class="worning">We got Your email. We will come back to you as much as possiable.</p>';
     }
 }
     
