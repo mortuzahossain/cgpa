@@ -6,7 +6,7 @@
             <h4 class="modal-title" id="myModalLabel">Universal Calculator</h4>
         </div>
         <div class="modal-body">
-            <form class="form-horizontal" method="post" action="universqal_calculator.php">
+            <form class="form-horizontal" method="post" action="">
                 <div class="form-group">
                     <label class="col-sm-2 control-label model_label">How many Subject You need</label>
                     <div class="col-sm-10">

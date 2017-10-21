@@ -23,7 +23,12 @@ if (isset($_POST['student_select'])) {
     }
 }
 
-
+if (isset($_POST['generate'])) {
+    $total_subject_no                   = validate($_POST['subject_no']);
+    $_SESSION['subject_generate']       = $total_subject_no;
+    header('Location: universqal_calculator.php');
+    exit();
+}
 
 ?>
 <div class="main-content">
@@ -169,6 +174,5 @@ foreach ($data as $key) { ?>
         });
     }    
 </script>
-
 
 <?php include 'include/footer.php'; ?>
