@@ -40,8 +40,8 @@
                         
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#" onclick="universal()">Universal Calculator</a></li>
-                                <li><a  data-toggle="modal" data-target="#contact">Contact</a></li>
+                                <li><a data-toggle="modal" data-target="#universal">Universal Calculator</a></li>
+                                <li><a data-toggle="modal" data-target="#contact">Contact</a></li>
                                 <?php if (!isset($_SESSION['name'])) {?>
                                 <li><a  data-toggle="modal" data-target="#login">Login</a></li>
                                 <li><a  data-toggle="modal" data-target="#registration">Signup</a></li>

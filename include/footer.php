@@ -12,6 +12,7 @@
         </div>
     </div>
 <?php
+include 'include/universal_calculator_model.php';
 include 'include/add_university_model.php';
 include 'include/login_reg_model.php';
 include 'include/contact_model.php';
@@ -20,17 +21,6 @@ include 'include/contact_model.php';
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/main.js"></script>
-
-
-    <script type="text/javascript">
-        function universal(){
-            swal({
-                title: "Comming Soon",
-                text: "This Feature will be available after <?php echo date('Y') ?>.",
-                imageUrl: 'img/thumbs-up.jpg'
-            });
-        }
-    </script>
 
 </body>
 </html>
