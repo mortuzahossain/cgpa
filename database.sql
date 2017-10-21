@@ -1,4 +1,7 @@
 
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:06";
+
 CREATE DATABASE `cgpa` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `cgpa`;
 
@@ -25,14 +28,14 @@ CREATE TABLE IF NOT EXISTS `data` (
   `courseName` varchar(150) NOT NULL,
   `courseCredit` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ;
+);
 
 CREATE TABLE IF NOT EXISTS `depertments` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `universityName` varchar(100) NOT NULL,
   `depertment` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ;
+);
 
 CREATE TABLE IF NOT EXISTS `universitys` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
