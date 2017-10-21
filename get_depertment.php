@@ -1,7 +1,7 @@
 <?php
 include 'include/db_config.php';
 if (!empty($_POST["universityName"])) {
-	$universityName = $_POST["universityName"];
+	$universityName = validate($_POST["universityName"]);
 }
 ?>
 <option value="">Select Your depertment</option>
@@ -15,6 +15,6 @@ if ($row) {
     }
 foreach ($data as $key) { ?>
 
-        <option value="<?php echo $key['depertment'] ?>"><?php echo $key['depertment'] ?></option>
+        <option value="<?php echo validate($key['depertment']) ?>"><?php echo validate($key['depertment']) ?></option>
 
 <?php } } ?>

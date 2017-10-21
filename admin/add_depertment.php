@@ -7,7 +7,7 @@
         $email          = $_SESSION['email'];
         $university     = $_SESSION['university'];
 
-        $depertment_name = $_POST['depertmentname'];
+        $depertment_name = validate($_POST['depertmentname']);
 
         if (!empty($depertment_name)) {
             // Check the depertment is exist or not

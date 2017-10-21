@@ -22,25 +22,25 @@ else {
 			<?php include 'include/right_sidebar.php'; ?>
 		</div>
 		<div class="col-md-10 main-content-penel">
-			<h2>Update Subject : <?php echo $subject_name; ?></h2>
+			<h2>Update Subject : <?php echo validate($subject_name); ?></h2>
 				<hr>
 				<form class="form-horizontal myform-update-subject" method="post" action="update_subject.init.php">
 					<div class="form-group">
 						<label class="col-sm-1 col-sm-offset-1 control-label">Name</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" placeholder="Electrical Circuits I" value="<?php echo $subject_name; ?>" name="subject" required="1">
+							<input type="text" class="form-control" placeholder="Electrical Circuits I" value="<?php echo validate($subject_name); ?>" name="subject" required="1">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-1 col-sm-offset-1 control-label">Code</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" placeholder="EEE3102" value="<?php echo $courseCode; ?>" name="course_code" required="1">
+							<input type="text" class="form-control" placeholder="EEE3102" value="<?php echo validate($courseCode); ?>" name="course_code" required="1">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-1 col-sm-offset-1 control-label">Credit</label>
 						<div class="col-sm-10">
-							<input type="number" step="0.1" class="form-control" value="<?php echo $courseCredit; ?>" placeholder="3.00" name="credit" required="1">
+							<input type="number" step="0.1" class="form-control" value="<?php echo validate($courseCredit); ?>" placeholder="3.00" name="credit" required="1">
 						</div>
 					</div>
 					<div class="form-group">

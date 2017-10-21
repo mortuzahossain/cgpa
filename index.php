@@ -102,7 +102,7 @@ if ($row) {
     }
 foreach ($data as $key) { ?>
 
-        <option value="<?php echo $key['universityName'] ?>"><?php echo $key['universityName'] ?></option>
+        <option value="<?php echo validate($key['universityName']); ?>"><?php echo validate($key['universityName']); ?></option>
 
 <?php } } ?>
                                 

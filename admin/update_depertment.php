@@ -5,7 +5,7 @@
 
         $university     	= $_SESSION['university'];
 		$depertmentId 		= $_SESSION['depertmentId'];
-        $depertment_name 	= $_POST['depertmentname'];
+        $depertment_name 	= validate($_POST['depertmentname']);
 
         if (!empty($depertment_name)) {
             // Add it Update it into database

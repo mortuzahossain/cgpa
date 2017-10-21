@@ -27,7 +27,7 @@ else {
 			<?php include 'include/right_sidebar.php'; ?>
 		</div>
 		<div class="col-md-10 main-content-penel">
-			<h2><?php echo $depertment; ?> Level <?php echo $level; ?> Tearm <?php echo $tearm; ?> <span><a  data-toggle="modal" data-target="#add_subject" class="btn btn-success right">Add Subject</a></span></h2>
+			<h2><?php echo validate($depertment); ?> Level <?php echo validate($level); ?> Tearm <?php echo validate($tearm); ?> <span><a  data-toggle="modal" data-target="#add_subject" class="btn btn-success right">Add Subject</a></span></h2>
 
 <?php
 if (isset($_GET['message'])) {

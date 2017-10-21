@@ -5,15 +5,15 @@ if (isset($userId)) {
 	$sql = "SELECT * FROM admins WHERE id = $userId";
 	$result = mysqli_query($con , $sql)->fetch_assoc();
 
-	$university = $result['university'];
+	$university 		= $result['university'];
 
 	$depertment 		= $result['current_subject'];
 	$level 				= $result['current_level'];
 	$tearm 				= $result['current_tearm'];
 
-	$_SESSION['level'] = $level;
-    $_SESSION['tearm'] = $tearm;
-    $_SESSION['depertment'] = $depertment;
+	$_SESSION['level'] 			= $level;
+    $_SESSION['tearm'] 			= $tearm;
+    $_SESSION['depertment'] 	= $depertment;
 
 
 

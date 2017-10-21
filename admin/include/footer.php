@@ -1,16 +1,6 @@
     
     <div class="footer navbar-fixed-bottom">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center">
-                        <a href="#"><i class="fb fa fa-facebook-square"></i></a>
-                        <a href="#"><i class="yt fa fa-youtube-square"></i></a>
-                        <a href="#"><i class="ph fa fa-phone-square"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php include '../include/social_footer.php'; ?>
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">

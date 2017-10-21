@@ -11,9 +11,9 @@
         $tearm          = $_SESSION['tearm'];
         $depertment     = $_SESSION['depertment'];
 
-        $subject        = $_POST['subject'];
-        $course_code    = $_POST['course_code'];
-        $credit         = $_POST['credit'];
+        $subject        = validate($_POST['subject']);
+        $course_code    = validate($_POST['course_code']);
+        $credit         = validate($_POST['credit']);
 
 
         if (!empty($subject) AND !empty($course_code) AND !empty($credit)) {
