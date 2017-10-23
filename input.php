@@ -36,8 +36,8 @@ include 'include/db_config.php';
 					<table class="table table-condensed mytable">
 						<tr class="dangerous">
 							<td width="5%">#</td>
-							<td width="45%">Subject Name</td>
 							<td width="20%">Code</td>
+							<td width="45%">Subject Name</td>
 							<td width="10%">Credit</td>
 							<td width="20%">Result</td>
 						</tr>
@@ -48,8 +48,8 @@ include 'include/db_config.php';
 ?>
 						<tr>
 							<td width="5%"><?php echo $i;?></td>
-							<td width="45%"><?php echo $key['courseCode'];?></td>
-							<td width="20%"><?php echo $key['courseName'];?></td>
+							<td width="20%"><?php echo $key['courseCode'];?></td>
+							<td width="45%"><?php echo $key['courseName'];?></td>
 							<td width="10%"><?php echo $key['courseCredit'];?></td>
 							<td width="20%">
 								<select class="mypickeri selectpicker show-tick" name="<?php echo "result".$i; ?>">
