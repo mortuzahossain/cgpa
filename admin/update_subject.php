@@ -40,7 +40,7 @@ else {
 					<div class="form-group">
 						<label class="col-sm-1 col-sm-offset-1 control-label">Credit</label>
 						<div class="col-sm-10">
-							<input type="number" step="0.1" class="form-control" value="<?php echo validate($courseCredit); ?>" placeholder="3.00" name="credit" required="1">
+							<input type="number" step="0.01" class="form-control" value="<?php echo validate($courseCredit); ?>" placeholder="3.00" name="credit" required="1">
 						</div>
 					</div>
 					<div class="form-group">
